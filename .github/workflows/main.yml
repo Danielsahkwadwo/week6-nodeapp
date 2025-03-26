@@ -83,10 +83,10 @@ jobs:
                 ],
                 "secrets": [
                     {"name": "AWS_ACCESS_KEY_ID", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/access_key_id"},
-                    {"name": "AWS_SECRET_ACCESS_KEY", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/secret_access_key"}
-                    {"name": "DATABASE_HOST", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/myapp/database/host"}
-                    {"name": "DATABASE_NAME", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/myapp/database/name"}
-                    {"name": "DATABASE_USERNAME", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/myapp/database/username"}
+                    {"name": "AWS_SECRET_ACCESS_KEY", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/secret_access_key"},
+                    {"name": "DATABASE_HOST", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/myapp/database/host"},
+                    {"name": "DATABASE_NAME", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/myapp/database/name"},
+                    {"name": "DATABASE_USERNAME", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/myapp/database/username"},
                     {"name": "DATABASE_PASSWORD", "valueFrom": "arn:aws:ssm:eu-west-1:863518454104:parameter/myapp/database/password"}
                 ]
               }
