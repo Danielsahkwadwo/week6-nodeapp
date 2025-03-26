@@ -4,11 +4,11 @@ import { Sequelize, Model, DataTypes } from "sequelize";
 
 export const sequelize = new Sequelize({
   dialect: "postgres",
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  database: process.env.DB_NAME,
+  username: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASSWORD,
+  host: process.env.DATABASE_HOST,
+  port: process.env.DATABASE_PORT,
+  database: process.env.DATABASE_NAME,
   dialectOptions: {
     ssl: {
       require: true,
