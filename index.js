@@ -6,7 +6,7 @@ import imageRoutes from "./routes/imageRoutes.js";
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // Middleware
 app.use(express.json());
