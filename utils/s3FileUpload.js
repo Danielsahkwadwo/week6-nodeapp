@@ -17,12 +17,10 @@ const BUCKET_NAME = process.env.AWS_BUCKET_NAME;
 
 // Upload Image to S3
 export const uploadToS3 = async (file) => {
-  const fileStream = fs.createReadStream(file.path);
-
   const params = {
     Bucket: BUCKET_NAME,
-    Key: `uploads/${file.filename}-${file.originalname}`, // S3 file path
-    Body: fileStream,
+    Key: `uploads/${file.filename}-${file.originalname}`,
+    Body: file.buffer,
     ContentType: file.mimetype,
   };
 
@@ -30,7 +28,7 @@ export const uploadToS3 = async (file) => {
   await s3.send(command);
 
   // Delete local file after upload
-  fs.unlinkSync(file.path);
+  // fs.unlinkSync(file.path);
 
   return `https://${BUCKET_NAME}.s3.amazonaws.com/uploads/${file.filename}-${file.originalname}`;
 };

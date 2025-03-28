@@ -39,6 +39,8 @@ export const createImage = async (req, res) => {
       return res.status(400).json({ error: "No image uploaded" });
     }
 
+    const now = Date.now()
+    req.file.filename = now;
     //upload image to s3
     const s3URL = await uploadToS3(req.file);
     if (!s3URL) {
